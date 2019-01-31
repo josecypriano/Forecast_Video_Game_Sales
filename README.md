@@ -80,6 +80,8 @@ Como mostrado na tabela abaixo, os erros de previsão e precisão do modelo são
 ![09 - autocorrelation plot](https://user-images.githubusercontent.com/34245933/52027270-eb01e900-24f1-11e9-8c21-87d73ee9affd.PNG)  
 *Figura 9: Autocorrelation Plot*
 
+Analisando os gráficos acima, concluímos que os dados não mostram correlação, portando nosso transformamos nossa base sazonal em um modelo ARIMA estacionário.
+
 ## Passo 4: Previsão
 Compare as medidas de erro da amostra em ambos os modelos e compare as medidas de erro da amostra de retenção na sua previsão. Escolha o modelo de melhor ajuste e preveja os próximos quatro períodos (limite de 250 palavras).
 
