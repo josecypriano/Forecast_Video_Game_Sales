@@ -28,6 +28,8 @@ A variável **Erro** é demonstrado no gráfico *Remainder* e nele vemos clarame
 
 ## Passo 3: Construa seus modelos
 
+### Modelo ETS (Error, Trend & Seasonality)
+
 1.	Quais são os termos modelo para o ETS? Explique por que você escolheu esses termos.
 
 a.	Descreva os erros na amostra. Use pelo menos RMSE e MASE ao examinar os resultados.
@@ -46,6 +48,8 @@ Podemos analisar os indicadores de ambos os métodos na comparação abaixo:
 *Figura 5: Comparação de Modelo ETS Amortecido e Não Amortecido*
 
 Como o MASE e o AIC são menores no modelo ETS Dempened (Amortecido), podemos afirmar que este modelo é o que tem mais fit com os meus dados históricos, ou seja, esse método é o mais acurado para o nosso problema de negócio. Portanto, é ele que devemos uma para realizar nosso forecast. O MASE e o AIC podemos dizer que são algumas das principais métricas para análise de fit de modelo para séries temporais.
+
+### Modelo ARIMA (Auto Regressive Integred Moving Average)
 
 2.	Quais são os termos modelo para o ARIMA? Explique por que você escolheu esses termos. Crie um gráfico com a função de correlação automática (Auto-Correlation Function - ACF) e lotes de função de autocorrelação parcial (Partial Autocorrelation Function Plots - PACF) para as séries temporais e o componente sazonal e use esses gráficos para justificar a escolha dos termos do modelo.
 
