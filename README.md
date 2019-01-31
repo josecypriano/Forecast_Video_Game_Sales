@@ -53,6 +53,10 @@ Como o MASE e o AIC são menores no modelo ETS Dempened (Amortecido), podemos af
 
 2.	Quais são os termos modelo para o ARIMA? Explique por que você escolheu esses termos. Crie um gráfico com a função de correlação automática (Auto-Correlation Function - ACF) e lotes de função de autocorrelação parcial (Partial Autocorrelation Function Plots - PACF) para as séries temporais e o componente sazonal e use esses gráficos para justificar a escolha dos termos do modelo.
 
+a.	Descreva os erros na amostra. Use pelo menos RMSE e MASE ao examinar os resultados.
+
+b.	Refaça os gráficos ACF e PACF tanto para a série temporal como para a diferença sazonal e inclua esses gráficos em sua resposta.
+
 Devido ao fato dos nossos dados conterem sazonalidade e o modelo de ARIMA trabalhar com dados estacionários, nos gráficos abaixo vemos uma alta variabilidade dos dados e alta correlação nos números, devido a sazonalidade. Diante disso precisamos ajustar a séria temporal para estacionária, utilizando a metodologia de diferença sazonal.
 
 ![06 - arima wo differencing](https://user-images.githubusercontent.com/34245933/52026884-9a3dc080-24f0-11e9-8dd4-654022ad087a.PNG)  
@@ -68,9 +72,13 @@ Para as séries não sazonais, como lag-1 é negativo e altamente correlacionado
 Enquanto as séries sazonais, percebemos que não há mais picos nos intervalos de 12 à 24 meses, portanto podemos assumir que os termos são: AR = 0, I = 1 e MA = 0.
 Por fim, nosso modelo fica da seguinte forma: ARIMA (0,1,1) (0,1,0) [12].
 
-a.	Descreva os erros na amostra. Use pelo menos RMSE e MASE ao examinar os resultados.
+Como mostrado na tabela abaixo, os erros de previsão e precisão do modelo são: RMSE 36761,52 e MASE 0.3646.
 
-b.	Refaça os gráficos ACF e PACF tanto para a série temporal como para a diferença sazonal e inclua esses gráficos em sua resposta.
+![08 - error analysis](https://user-images.githubusercontent.com/34245933/52027261-df162700-24f1-11e9-8511-4cf39aec9717.PNG)  
+*Figura 8: Erros dos Resultados*
+
+![09 - autocorrelation plot](https://user-images.githubusercontent.com/34245933/52027270-eb01e900-24f1-11e9-8c21-87d73ee9affd.PNG)  
+*Figura 9: Autocorrelation Plot*
 
 ## Passo 4: Previsão
 Compare as medidas de erro da amostra em ambos os modelos e compare as medidas de erro da amostra de retenção na sua previsão. Escolha o modelo de melhor ajuste e preveja os próximos quatro períodos (limite de 250 palavras).
