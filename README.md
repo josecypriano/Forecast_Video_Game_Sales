@@ -89,4 +89,10 @@ Responda às seguintes perguntas:
 
 1.	Qual modelo você escolheu? Justifique sua resposta mostrando: medições de erro na amostra e medidas de erro de previsão contra a amostra de retenção.
 
+Para fazer a comparação do melhor modelo, escolhemos o modelo ARIMA e o ETS Amortecido, visto que o modelo amortecido tinha mais acurácia que o modelo não amortecido.
+Ao analisar os resultados de ambos modelos, percebemos que o modelo ARIMA tem mais acurácia com os nossos dados, portanto é o que devemos usar para realizar o nosso Forecast. Constamos isso, pois o RMSE para ARIMA é de 33999.79 enquanto para ETS é de 60176.47. Já para MASE, ARIMA tem acurácia de 0.4532 e ETS 0.8116.
+
+![10 - comparacao de modelos](https://user-images.githubusercontent.com/34245933/52065223-37364300-255d-11e9-94c6-583cf954acf7.PNG)  
+*Figura 10: Comparação de Modelos*
+
 2.	Qual é a previsão para os próximos quatro períodos? Crie um gráfico com os resultados, usando intervalos de confiança de 95% e 80%.
