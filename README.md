@@ -53,7 +53,23 @@ Como o MASE e o AIC são menores no modelo ETS Dempened (Amortecido), podemos af
 
 2.	Quais são os termos modelo para o ARIMA? Explique por que você escolheu esses termos. Crie um gráfico com a função de correlação automática (Auto-Correlation Function - ACF) e lotes de função de autocorrelação parcial (Partial Autocorrelation Function Plots - PACF) para as séries temporais e o componente sazonal e use esses gráficos para justificar a escolha dos termos do modelo.
 
+Devido ao fato dos nossos dados conterem sazonalidade e o modelo de ARIMA trabalhar com dados estacionários, nos gráficos abaixo vemos uma alta variabilidade dos dados e alta correlação nos números, devido a sazonalidade. Diante disso precisamos ajustar a séria temporal para estacionária, utilizando a metodologia de diferença sazonal.
+
+![06 - arima wo differencing](https://user-images.githubusercontent.com/34245933/52026884-9a3dc080-24f0-11e9-8dd4-654022ad087a.PNG)  
+*Figura 6: ACF & PACF sem diferenciação*
+
+Após fazermos a primeira transformação pela diferenciação, percebemos que os dados ficaram estacionários, ou seja, podemos considerar que a primeira diferença sazonal ajusta os nossos dados para a aplicação do modelo.
+
+![07 - arima first differencing](https://user-images.githubusercontent.com/34245933/52026899-aa55a000-24f0-11e9-93cf-4590a3daa26a.PNG)  
+*Figura 7: ACF & PACF primeira diferença sazonal*
+
+Agora que temos o modelo estacionário, podemos fazer a definição dos termos de AR e/ou MA para aplicação do modelo.
+Para as séries não sazonais, como lag-1 é negativo e altamente correlacionado, podemos considerar os termos: AR = 0, I = 1 e MA = 1.
+Enquanto as séries sazonais, percebemos que não há mais picos nos intervalos de 12 à 24 meses, portanto podemos assumir que os termos são: AR = 0, I = 1 e MA = 0.
+Por fim, nosso modelo fica da seguinte forma: ARIMA (0,1,1) (0,1,0) [12].
+
 a.	Descreva os erros na amostra. Use pelo menos RMSE e MASE ao examinar os resultados.
+
 b.	Refaça os gráficos ACF e PACF tanto para a série temporal como para a diferença sazonal e inclua esses gráficos em sua resposta.
 
 ## Passo 4: Previsão
