@@ -96,3 +96,19 @@ Ao analisar os resultados de ambos modelos, percebemos que o modelo ARIMA tem ma
 *Figura 10: Comparação de Modelos*
 
 2.	Qual é a previsão para os próximos quatro períodos? Crie um gráfico com os resultados, usando intervalos de confiança de 95% e 80%.
+
+A previsão para os próximos 4 meses (2013-10 à 2014-1) são: 754,854, 785,854, 684,854 e 687,854.
+
+![11 - resultados finais](https://user-images.githubusercontent.com/34245933/52066120-0eaf4880-255f-11e9-8bcc-d728b36481a9.PNG)
+
+## Alteryx Flow
+
+### ARIMA Workflow
+
+![12 - arima workflow](https://user-images.githubusercontent.com/34245933/52066272-5cc44c00-255f-11e9-8fb8-be5b3b9fa0a6.PNG)  
+*Figura 11: ARIMA Workflow*
+
+### ETS Workflow
+
+![13 - ets workflow](https://user-images.githubusercontent.com/34245933/52066329-749bd000-255f-11e9-96b4-1bd40d9ff9e9.PNG)  
+*Figura 12: ETS Workflow*
