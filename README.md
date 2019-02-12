@@ -1,5 +1,5 @@
 # Forecast_Video_Game_Sales
-Project 5 - ND Predictive Analysis for Business
+Project 6 - ND Predictive Analysis for Business
 
 ## Passo 1: Planeje sua análise
 
